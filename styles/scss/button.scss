@@ -1,0 +1,11 @@
+.btn {
+  @apply inline-flex gap-2 justify-center items-center font-semibold cursor-pointer px-4 py-2 rounded-full;
+
+  &-primary {
+    @apply text-white border border-primary-500 bg-primary-500 hover:bg-primary-400 hover:border-primary-400 active:border-primary-600 active:bg-primary-600 disabled:border-blue-100 disabled:bg-blue-100 disabled:cursor-default;
+  }
+
+  &-secondary {
+    @apply text-primary-500 border border-primary-500 bg-white hover:text-primary-400 hover:border-primary-400 active:text-primary-600 active:border-primary-600 disabled:border-primary-50 disabled:text-primary-100 disabled:cursor-default;
+  }
+}
