@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-import CoverImage from "@/app/cover-image";
-import Avatar from "@/app/avatar";
-import Date from "@/app/date";
+import CoverImage from "@/app/components/Partials/cover-image";
+import Avatar from "@/app/components/Partials/avatar";
+import Date from "@/app/components/Partials/date";
 
 export default function HeroPost({
   title,

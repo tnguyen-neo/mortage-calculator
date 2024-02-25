@@ -1,5 +1,4 @@
 import { EXAMPLE_PATH } from '@/lib/constants';
-import React from 'react'
 
 export default function Footer() {
   return (

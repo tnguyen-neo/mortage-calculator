@@ -1,4 +1,3 @@
-import React from "react"
 import InstaCard from "@/public/images/insta-card.svg"
 import ContentfulImage from "@/lib/contentful-image"
 import '@/styles/scss/button.scss'
