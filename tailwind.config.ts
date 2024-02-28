@@ -290,7 +290,7 @@ const colors = {
     800: "#854A0E",
     900: "#713B12",
   },
-  transparent: "#00000000"
+  transparent: "#00000000",
 };
 
 export default {

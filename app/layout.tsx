@@ -2,7 +2,6 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { CMS_NAME } from "@/lib/constants";
 import Header from "./components/Layouts/Header";
-import Footer from "./components/Layouts/Footer";
 
 export const metadata = {
   title: `Next.js and ${CMS_NAME} Example`,
@@ -23,10 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body>
-        <section className="min-h-screen">
+        <section className="min-h-screen pb-10">
           <Header />
           <main>{children}</main>
-          <Footer />
         </section>
       </body>
     </html>

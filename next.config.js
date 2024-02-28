@@ -4,6 +4,7 @@ const path = require("path");
 
 const nextConfig = {
   images: {
+    domains: ['images.ctfassets.net'],
     loader: "custom",
     formats: ["image/avif", "image/webp"],
   },

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { draftMode } from "next/headers";
 import { Markdown } from "@/lib/markdown";
-import { getAllPosts, getPostAndMorePosts } from "@/lib/api";
+import { getAllPosts, getPostAndMorePosts } from "@/lib/apis/Post.api";
 
 import MoreStories from "../../components/Partials/more-stories";
 import Avatar from "../../components/Partials/avatar";
