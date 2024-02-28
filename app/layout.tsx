@@ -5,7 +5,7 @@ import Header from "./components/Layouts/Header";
 import { Providers } from "./providers";
 
 export const metadata = {
-  title: `Next.js and ${CMS_NAME} Example`,
+  title: `Mortgage Calculator Landing Page`,
   description: `This is a blog built with Next.js and ${CMS_NAME}.`,
 };
 
