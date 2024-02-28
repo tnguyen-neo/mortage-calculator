@@ -11,11 +11,6 @@ export default function MortgageCalculator() {
   const [loanAmount, setLoanAmount] = useState(0);
   const [monthlyRepayment, setMonthlyRepayment] = useState(0);
 
-  const sliderLayout = {
-    filler: "bg-primary-700",
-    track: "bg-white border-l-primary-700",
-  };
-
   useEffect(() => {
     const [loanPrice, r, n] = [
       purchasePrice - downPayment,
@@ -71,7 +66,11 @@ export default function MortgageCalculator() {
                 currency: "USD",
                 maximumFractionDigits: 0,
               }}
-              classNames={{ base: "max-w-md", ...sliderLayout }}
+              classNames={{
+                base: "max-w-md",
+                filler: "bg-primary-700",
+                track: "bg-white border-l-primary-700",
+              }}
               onChange={(value: any) => setPurchasePrice(value)}
             />
             <Slider
@@ -87,7 +86,11 @@ export default function MortgageCalculator() {
                 currency: "USD",
                 maximumFractionDigits: 0,
               }}
-              classNames={{ base: "max-w-md", ...sliderLayout }}
+              classNames={{
+                base: "max-w-md",
+                filler: "bg-primary-700",
+                track: "bg-white border-l-primary-700",
+              }}
               onChange={(value: any) => setDownPayment(value)}
             />
             <Slider
@@ -100,7 +103,8 @@ export default function MortgageCalculator() {
               classNames={{
                 base: "max-w-md",
                 value: "after:content-['year(s)'] after:ml-1",
-                ...sliderLayout,
+                filler: "bg-primary-700",
+                track: "bg-white border-l-primary-700",
               }}
               onChange={(value: any) => setRepaymentTime(value)}
             />
@@ -114,7 +118,8 @@ export default function MortgageCalculator() {
               classNames={{
                 base: "max-w-md",
                 value: "after:content-['%']",
-                ...sliderLayout,
+                filler: "bg-primary-700",
+                track: "bg-white border-l-primary-700",
               }}
               onChange={(value: any) => setInterestRate(value)}
             ></Slider>
