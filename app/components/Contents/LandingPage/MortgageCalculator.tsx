@@ -11,6 +11,11 @@ export default function MortgageCalculator() {
   const [loanAmount, setLoanAmount] = useState(0);
   const [monthlyRepayment, setMonthlyRepayment] = useState(0);
 
+  const sliderLayout = {
+    filler: "bg-primary-700 border-l-primary-700",
+    track: "bg-white border-l-primary-700",
+  };
+
   useEffect(() => {
     const [loanPrice, r, n] = [
       purchasePrice - downPayment,
@@ -68,8 +73,7 @@ export default function MortgageCalculator() {
               }}
               classNames={{
                 base: "max-w-md",
-                filler: "bg-primary-700",
-                track: "bg-white border-l-primary-700",
+                ...sliderLayout,
               }}
               onChange={(value: any) => setPurchasePrice(value)}
             />
@@ -88,8 +92,7 @@ export default function MortgageCalculator() {
               }}
               classNames={{
                 base: "max-w-md",
-                filler: "bg-primary-700",
-                track: "bg-white border-l-primary-700",
+                ...sliderLayout,
               }}
               onChange={(value: any) => setDownPayment(value)}
             />
@@ -103,8 +106,7 @@ export default function MortgageCalculator() {
               classNames={{
                 base: "max-w-md",
                 value: "after:content-['year(s)'] after:ml-1",
-                filler: "bg-primary-700",
-                track: "bg-white border-l-primary-700",
+                ...sliderLayout,
               }}
               onChange={(value: any) => setRepaymentTime(value)}
             />
@@ -118,8 +120,7 @@ export default function MortgageCalculator() {
               classNames={{
                 base: "max-w-md",
                 value: "after:content-['%']",
-                filler: "bg-primary-700",
-                track: "bg-white border-l-primary-700",
+                ...sliderLayout,
               }}
               onChange={(value: any) => setInterestRate(value)}
             ></Slider>
