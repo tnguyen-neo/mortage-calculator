@@ -1,6 +1,8 @@
 import type { Config } from "tailwindcss";
 import typography from "@tailwindcss/typography";
 
+import { nextui } from "@nextui-org/react";
+
 const colors = {
   white: "#FFFFFF",
   black: "#000000",
@@ -298,6 +300,7 @@ export default {
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./lib/**/*.{ts,tsx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     colors,
@@ -310,5 +313,6 @@ export default {
   future: {
     hoverOnlyWhenSupported: true,
   },
-  plugins: [typography],
+  darkMode: "class",
+  plugins: [typography, nextui()],
 } satisfies Config;
