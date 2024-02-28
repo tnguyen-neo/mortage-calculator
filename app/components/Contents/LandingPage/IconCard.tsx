@@ -37,25 +37,26 @@ export default async function IconCardContainer() {
 
 function IconCard({ props }: any) {
   return (
-    <span className="w-full sm:w-1/3 md:w-1/4 xl:w-1/5 flex justify-center
-      h-auto hover:shadow-md hover:shadow-primary-200 cursor-default">
-      <span
-        className="w-60 min-h-56 h-full px-4 py-8 flex flex-col gap-4 items-center rounded
-        bg-[#f9fbfe] shadow-[inset_0_0_0.75rem] shadow-primary-200"
-      >
-        <ContentfulImage
-          width={0}
-          height={0}
-          src={`https:${props.url}`}
-          alt={props.title}
-          className="h-8 w-auto"
-        />
-        <div className="grid gap-2">
-          <span className="text-2xl font-semibold text-center">
-            {props.title}
-          </span>
-          <span className="text-xl text-center">{props.description}</span>
-        </div>
+    <span className="w-full h-auto sm:w-1/3 md:w-1/4 xl:w-1/5 flex justify-center cursor-default">
+      <span className="hover:shadow-md hover:shadow-primary-200">
+        <span
+          className="w-60 min-h-56 h-full px-4 py-8 flex flex-col gap-4 items-center rounded
+          bg-[#f9fbfe] shadow-[inset_0_0_0.75rem] shadow-primary-200"
+        >
+          <ContentfulImage
+            width={0}
+            height={0}
+            src={`https:${props.url}`}
+            alt={props.title}
+            className="h-8 w-auto"
+          />
+          <div className="grid gap-2">
+            <span className="text-2xl font-semibold text-center">
+              {props.title}
+            </span>
+            <span className="text-xl text-center">{props.description}</span>
+          </div>
+        </span>
       </span>
     </span>
   );
