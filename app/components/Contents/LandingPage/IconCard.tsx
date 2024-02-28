@@ -38,9 +38,9 @@ export default async function IconCardContainer() {
 function IconCard({ props }: any) {
   return (
     <span className="w-full h-auto sm:w-1/3 md:w-1/4 xl:w-1/5 flex justify-center cursor-default">
-      <span className="hover:shadow-md hover:shadow-primary-200">
+      <span className="w-60 min-h-56 hover:shadow-md hover:shadow-primary-200">
         <span
-          className="w-60 min-h-56 h-full px-4 py-8 flex flex-col gap-4 items-center rounded
+          className="w-full h-full px-4 py-8 flex flex-col gap-4 items-center rounded
           bg-[#f9fbfe] shadow-[inset_0_0_0.75rem] shadow-primary-200"
         >
           <ContentfulImage
