@@ -6,36 +6,34 @@ export default async function HeroLandingPage() {
   const iconCards = await getLandingPage();
 
   return (
-    <div className="relative h-auto">
-      <ContentfulImage
-        src={`https:${iconCards.coverImage.url}`}
-        alt=""
-        width={iconCards.coverImage.details.image.width}
-        height={iconCards.coverImage.details.image.height}
-        quality={100}
-        className="z-0 w-full object-contain"
-      />
-      <div
-        className="max-w-[1280px] absolute top-0 left-1/2 -translate-x-1/2 z-10 
-        w-full h-full flex"
-      >
-        <div className="w-1/2 flex flex-col justify-center gap-4">
-          <span className="text-6xl leading-[5rem] font-bold first-line:text-primary-500">
-            {iconCards.title}
-          </span>
-          <span className="text-2xl">{iconCards.description}</span>
-          <div className="relative flex justify-between items-center gap-3 pl-6 p-2 bg-white rounded-full h-auto">
-            <Mail className="w-10 text-gray-400" />
-            <input
-              className="py-4 w-full focus:outline-none"
-              placeholder="Enter your email"
-            />
-            <button className="btn btn-primary min-w-max h-full">
-              Get early access
-            </button>
+    <div
+      className="lg:min-h-[720px] lg:h-[720px] flex max-lg:py-8 px-8"
+      style={{
+        backgroundImage: `url(https:${iconCards.coverImage.url})`,
+        backgroundSize: "cover",
+      }}
+    >
+      <div className="max-w-[1280px] w-full h-full flex mx-auto">
+        <div className="w-full flex items-center max-lg:justify-center">
+          <div className="max-w-lg w-full flex flex-col justify-center gap-4">
+            <span className="text-6xl leading-[5rem] font-bold first-line:text-primary-500">
+              {iconCards.title}
+            </span>
+            <span className="text-2xl">{iconCards.description}</span>
+            <div className="relative flex justify-between items-center gap-3 pl-6 px-2 py-1 bg-white rounded-full h-auto">
+              <Mail className="w-10 text-gray-400" />
+              <input
+                className="py-4 w-full focus:outline-none"
+                placeholder="Enter your email"
+              />
+              <button className="btn-primary min-w-max h-full px-4 py-3 rounded-full">
+                Get Early Access
+              </button>
+            </div>
           </div>
         </div>
-        <div className="relative w-1/2">
+
+        <div className="max-lg:hidden relative w-full">
           <ContentfulImage
             src={`https:${iconCards.contentImage.url}`}
             alt=""

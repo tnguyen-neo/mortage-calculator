@@ -7,20 +7,16 @@ import ContentfulImage from "@/lib/contentful-image";
 export default async function ImageIntro() {
   const imageIntro = await getImageIntro();
   return (
-    <div className="relative h-auto">
-      <ContentfulImage
-        src={`https:${imageIntro.image.url}`}
-        alt=""
-        width={imageIntro.image.details.image.width}
-        height={imageIntro.image.details.image.height}
-        quality={100}
-        className="z-0 w-full object-contain"
-      />
-      <div
-        className="max-w-[1280px] absolute top-0 left-1/2 -translate-x-1/2 z-10 
-        w-full h-full flex"
-      >
-        <div className="w-1/2 flex flex-col justify-center gap-4">
+    <div
+      className="lg:min-h-[680px] lg:h-[680px] flex max-lg:py-8 px-8"
+      style={{
+        backgroundImage: `url(https:${imageIntro.image.url})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="max-w-[1280px] w-full h-full flex">
+        <div className="w-full md:w-2/3 lg:w-1/2 flex flex-col justify-center gap-4">
           <span className="text-3xl font-medium text-primary-500">
             THE BENEFIT WE HAVE
           </span>

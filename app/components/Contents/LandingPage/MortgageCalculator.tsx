@@ -11,6 +11,11 @@ export default function MortgageCalculator() {
   const [loanAmount, setLoanAmount] = useState(0);
   const [monthlyRepayment, setMonthlyRepayment] = useState(0);
 
+  const sliderLayout = {
+    filler: "bg-primary-700",
+    track: "bg-white border-l-primary-700",
+  };
+
   useEffect(() => {
     const [loanPrice, r, n] = [
       purchasePrice - downPayment,
@@ -24,8 +29,8 @@ export default function MortgageCalculator() {
   }, [purchasePrice, downPayment, repaymentTime, interestRate]);
 
   return (
-    <div className="grid grid-cols-5 gap-4">
-      <div className="col-span-2 p-10">
+    <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+      <div className="lg:col-span-2 p-10">
         <div className="grid gap-4">
           <div className="text-4xl leading-10 font-semibold">
             Try our awesome Calculator
@@ -42,7 +47,7 @@ export default function MortgageCalculator() {
         </div>
       </div>
 
-      <div className="col-span-3 p-10 bg-primary-500">
+      <div className="lg:col-span-3 p-10 bg-primary-500 rounded-lg">
         <div className="text-white grid gap-8">
           <div className="grid gap-4">
             <span className="text-4xl leading-10 font-semibold">
@@ -52,7 +57,7 @@ export default function MortgageCalculator() {
               Take control with a plan set in stone.
             </span>
           </div>
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8">
             <Slider
               color={"foreground"}
               label="Purchase Price"
@@ -66,7 +71,7 @@ export default function MortgageCalculator() {
                 currency: "USD",
                 maximumFractionDigits: 0,
               }}
-              className="max-w-md"
+              classNames={{ base: "max-w-md", ...sliderLayout }}
               onChange={(value: any) => setPurchasePrice(value)}
             />
             <Slider
@@ -82,7 +87,7 @@ export default function MortgageCalculator() {
                 currency: "USD",
                 maximumFractionDigits: 0,
               }}
-              className="max-w-md"
+              classNames={{ base: "max-w-md", ...sliderLayout }}
               onChange={(value: any) => setDownPayment(value)}
             />
             <Slider
@@ -95,6 +100,7 @@ export default function MortgageCalculator() {
               classNames={{
                 base: "max-w-md",
                 value: "after:content-['year(s)'] after:ml-1",
+                ...sliderLayout,
               }}
               onChange={(value: any) => setRepaymentTime(value)}
             />
@@ -108,6 +114,7 @@ export default function MortgageCalculator() {
               classNames={{
                 base: "max-w-md",
                 value: "after:content-['%']",
+                ...sliderLayout,
               }}
               onChange={(value: any) => setInterestRate(value)}
             ></Slider>
