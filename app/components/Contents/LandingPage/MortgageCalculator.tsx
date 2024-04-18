@@ -12,8 +12,8 @@ export default function MortgageCalculator() {
   const [monthlyRepayment, setMonthlyRepayment] = useState(0);
 
   const sliderLayout = {
-    filler: "bg-primary-700 border-l-primary-700",
-    track: "bg-white border-l-primary-700",
+    filler: "bg-primary-700 border-s-primary-700",
+    track: "bg-white border-s-primary-700",
   };
 
   useEffect(() => {
